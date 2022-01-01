@@ -1,2 +1,0 @@
-# Hacketon-sample# me
-# me
