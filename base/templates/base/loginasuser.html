@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div>
+        <form action="", method = 'POST'>
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input type="submit" value="Login">
+        </form>
+        {% for freelancer in freelancers %}
+            {% if {{freelancer.password}} == {{form.password}} %}
+            @{{freelancer.frist_name}}, Hi
+            <a href="freelancerpage.html">Continue</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock content %}

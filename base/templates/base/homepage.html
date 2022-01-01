@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div id="container">
+        <div class="navbar">
+                <div class="navbar__logo">
+                        <img src = ""  alt = "">
+                </div>
+                <div class = "link">
+                        <ul class="links">
+                                <li id="navigation2"> <a  id = "element2" href="{% url 'login' %}">Login</a></li>
+                                <li id="navigation1"><a id = "element1" href="{% url 'signup' %}">Signup</a></li>
+                        </ul>
+                </div>
+        </div>
+        <main>
+            
+            <img src="backg.jpg" alt="freelance">
+            <a href="login.html" id="freelance">Freelance</a>
+            <a href="login.html" id = "find_talent">Hire Talent</a>
+        </main>
+        <aside id="aside1">
+                <h1>Hello every one</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptate sint magnam iusto, odio quibusdam fugit obcaecati ad eaque sapiente nostrum. Illum totam ipsam amet eveniet fugit natus, deserunt dignissimos.</p>
+        </aside>
+        <aside id="aside2">
+                <h1>Hello sami</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quaerat cum earum dignissimos veritatis odit consequatur nemo inventore fugiat rerum facere hic beatae, in omnis cupiditate voluptate non dolores architecto.</p>
+        </aside>
+</div>
+{% endblock %}

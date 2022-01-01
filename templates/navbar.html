@@ -1,0 +1,162 @@
+<style>
+
+   #container{ 
+            box-sizing: inherit;
+            background-color: bisque;
+    }
+    * {
+    box-sizing: inherit;
+    }
+
+    img{
+        height:100px;
+        float:left;
+    }
+    #freelancer, #find_talent{
+        text-decoration: none;
+    }
+    .links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.6em;
+    }
+
+    .navbar{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            background-color:rgb(90, 76, 76);
+            border:2px rebeccapurple solid;
+            align-items:center;
+            height:10em;
+            border-radius:6px;
+            position: relative;
+    }
+    .links a{
+            color:hsl(0, 33%, 99%);
+            text-decoration:none;
+            padding:1em;
+            font-size:1.5em;
+            height:20px;
+            width: fit-content;
+            border:1px white solid;
+            border-radius:2px;
+            margin: 0.25em;
+    }
+
+    main{
+        background-color:rgb(221, 50, 50)
+    }
+
+
+
+
+    @media screen and (min-width: 425px) {
+    nav ul li {
+        flex: none;
+    }
+    nav ul {
+        justify-content: center;
+    }
+    #container {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: "navbar navbar" "main aside2" "aside1 aside1" "address address" "footer footer";
+        margin: 0 auto;
+    }
+    header {
+        grid-area: navbar;
+    }
+    main {
+        grid-area: main;
+        margin-bottom: 0;
+    }
+    #aside1 {
+        grid-area: aside1;
+    }
+    #aside2 {
+        grid-area: aside2;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .address {
+        grid-area: address;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+
+#table,
+#table__row {
+    padding: 2em 1em;
+    margin: 0.25em;
+}
+
+
+/* large */
+
+@media screen and (min-width: 768px) {
+    #navigation {
+        flex: none;
+    }
+    .links {
+        justify-content: center;
+    }
+    #container {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "navbar navbar navbar" "aside1 main aside2" "address address address" "footer footer footer";
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+    .navbar {
+        grid-area: navbar;
+    }
+    main {
+        grid-area: main;
+        margin-bottom: 1em;
+    }
+    #aside1 {
+        grid-area: aside1;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 0;
+    }
+    #aside2 {
+        grid-area: aside2;
+        border-top-right-radius: 4px;
+        margin-bottom: 0.8em;
+        border-bottom-right-radius: 6px;
+    }
+    .address {
+        grid-area: address;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+
+#element1:hover,
+#element2:hover,
+#element3:hover,
+#element4:hover,
+#element5:hover,
+#element6:hover {
+    background-color: rgb(231, 107, 35);
+    transition: all 1s ease;
+}
+
+#next:hover,
+#aside1:hover,
+#aside2:hover,
+#pro__text:hover {
+    background-color: rgb(197, 184, 184);
+    animation: forwards;
+}
+
+
+
+
+</style>

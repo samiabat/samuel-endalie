@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div id="container">
+        <div class="navbar">
+                <div class="navbar__logo">
+                        <img src = ""  alt = "">
+                </div>
+                <div class = "link">
+                        <ul class="links">
+                                <li id="navigation1"><a id = "element1" href="{% url 'signup' %}">Signup</a></li>
+                                <li id="navigation2"> <a  id = "element2" href="{% url 'login' %}">Login</a></li>
+                                <li id="navigation2"><a  id = "element3" href="{% url 'logout' %}">Logout</a></li>
+                                <li id="navigation3"><a  id = "element4" href="{% url 'send-message' %}">Send Message</a></li>
+                                <li id="navigation4"><a  id = "element5" href="{% url 'post-job' %}">Post Job</a></li>
+                        </ul>
+                </div>
+        </div>
+        <main>
+                <h1>Jobs</h1>
+                {% for job in jobs %}
+                       <a href=""><h2>{{job.job_title}}</h2></a> 
+                        {{job.job_description }} <br>
+                        ${{job.salary}}
+                         <br>
+                       <a href="{% url 'delete-job' job.id %}">Delete</a>
+                        <a href="{% url 'update-job' job.id %}">Update</a>
+                {% endfor %}
+        </main>
+        <aside id="aside1">
+                <h1>Hello every one</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptate sint magnam iusto, odio quibusdam fugit obcaecati ad eaque sapiente nostrum. Illum totam ipsam amet eveniet fugit natus, deserunt dignissimos.</p>
+        </aside>
+        <aside id="aside2">
+                <h1>Hello sami</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quaerat cum earum dignissimos veritatis odit consequatur nemo inventore fugiat rerum facere hic beatae, in omnis cupiditate voluptate non dolores architecto.</p>
+        </aside>
+</div>
+{% endblock %}
